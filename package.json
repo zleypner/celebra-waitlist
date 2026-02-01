@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "kill": "lsof -ti:3001 | xargs kill -9 2>/dev/null || true",
+    "kill": "npx --yes kill-port 3001",
     "dev": "npm run kill && next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.93.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
     "next": "^15.5.7",
