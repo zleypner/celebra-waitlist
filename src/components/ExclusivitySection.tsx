@@ -6,21 +6,23 @@ interface ExclusivitySectionProps {
 
 export default function ExclusivitySection({ onCTAClick }: ExclusivitySectionProps) {
   return (
-    <section className="py-24 px-4 bg-black text-white">
+    <section id="acceso-anticipado" className="py-24 px-4 bg-black text-white scroll-mt-20">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight">
-          No abrimos para todos al mismo tiempo
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 tracking-tight">
+          No llegaste tarde.
         </h2>
-        
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight text-[#F5C842]">
+          Llegaste justo a tiempo.
+        </h2>
+
         <div className="mb-12 space-y-4">
           <p className="text-lg md:text-xl leading-relaxed text-white/90">
-            Algunos organizadores ya están en lista. El lanzamiento será público — el acceso anticipado no.
-          </p>
-          <p className="text-lg md:text-xl leading-relaxed text-white/90">
-            Primero los que crean experiencias, después el resto.
+            Mientras algunos organizadores ya están entrando,<br />
+            la mayoría todavía no se dio cuenta.
           </p>
           <p className="text-base md:text-lg leading-relaxed text-white/70 italic">
-            Cada semana más organizadores se están sumando. La mayoría lo verá cuando ya esté abierto. Vos todavía estás a tiempo de entrar antes.
+            Estás viendo esto antes que otros.<br />
+            Aprovechalo.
           </p>
         </div>
         

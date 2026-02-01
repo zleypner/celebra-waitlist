@@ -48,7 +48,7 @@ export default function ValueSection() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-white">
+    <section id="como-funciona" className="py-24 px-4 bg-white scroll-mt-20">
       <div className="max-w-6xl mx-auto px-4">
         <div 
           ref={cardsRef}

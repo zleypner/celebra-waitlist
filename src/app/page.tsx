@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ValueSection from '@/components/ValueSection';
 import SocialProofSection from '@/components/SocialProofSection';
@@ -31,7 +32,8 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pb-20 md:pb-0">
+      <Navbar onCTAClick={scrollToForm} />
       <Hero onCTAClick={scrollToForm} />
       <ValueSection />
       <SocialProofSection onCTAClick={scrollToForm} />

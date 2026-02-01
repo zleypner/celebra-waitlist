@@ -12,7 +12,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
       {/* Background image with overlay */}
       <div className="absolute inset-0 opacity-30">
         <Image
-          src="/assets/events/event5.jpg"
+          src="/assets/events/event3.jpg"
           alt="Background"
           fill
           className="object-cover"
@@ -26,20 +26,14 @@ export default function Hero({ onCTAClick }: HeroProps) {
       {/* Additional subtle gradient effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(245,200,66,0.08),transparent_50%)] pointer-events-none" />
       
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 relative z-10 pt-16">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-12">
-            <Image
-              src="/assets/celebralogo.png"
-              alt="Celebra"
-              width={200}
-              height={80}
-              className="mx-auto"
-              priority
-            />
-          </div>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900 tracking-tight">
+          {/* Brand line / Eyebrow */}
+          <p className="text-sm md:text-lg font-medium tracking-[0.15em] uppercase text-gray-600 mb-5 md:mb-8">
+            Celebra <span className="text-gray-400 mx-2">—</span> Captura y celebra
+          </p>
+
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900 tracking-tight">
             Acceso anticipado para quienes crean experiencias inolvidables
           </h1>
           
