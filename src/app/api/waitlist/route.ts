@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase';
 
 export async function POST(request: NextRequest) {
   try {
@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { error } = await supabase.from('waitlist').insert({
+    const { error } = await getSupabase().from('waitlist').insert({
       email: email.trim().toLowerCase(),
       whatsapp: whatsapp.trim(),
       source: source ?? 'waitlist-premium',
