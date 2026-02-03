@@ -73,9 +73,6 @@ export default function EnhancedCTAsSection({ onCTAClick }: EnhancedCTAsSectionP
               <div className="flex items-start gap-4">
                 <div className="text-3xl">{cta.icon}</div>
                 <div className="flex-1">
-                  <div className="text-xs font-semibold text-gray-500 mb-1 uppercase tracking-wide">
-                    {cta.principle}
-                  </div>
                   <div className={`text-base font-semibold ${cta.urgency ? 'text-red-700' : 'text-gray-900'}`}>
                     {cta.text}
                   </div>
