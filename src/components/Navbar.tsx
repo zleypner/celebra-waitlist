@@ -38,8 +38,8 @@ export default function Navbar({ onCTAClick }: NavbarProps) {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-sm'
-            : 'bg-white/80 backdrop-blur-sm'
+            ? 'bg-black backdrop-blur-md shadow-sm'
+            : 'bg-black backdrop-blur-sm'
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -47,7 +47,7 @@ export default function Navbar({ onCTAClick }: NavbarProps) {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Image
-                src="/assets/celebra-logo.png"
+                src="/assets/imagotipo-horizontal-yellow.png"
                 alt="Celebra"
                 width={140}
                 height={40}
@@ -62,7 +62,7 @@ export default function Navbar({ onCTAClick }: NavbarProps) {
                 <button
                   key={link.sectionId}
                   onClick={() => handleNavClick(link.sectionId)}
-                  className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200 rounded-lg hover:bg-[#F5C842]/10"
+                  className="px-4 py-2 text-sm font-medium text-white hover:text-[#F5C842] transition-colors duration-200 rounded-lg hover:bg-white/10"
                 >
                   {link.label}
                 </button>
@@ -79,7 +79,7 @@ export default function Navbar({ onCTAClick }: NavbarProps) {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+                className="p-2 rounded-lg text-white hover:text-[#F5C842] hover:bg-white/10 transition-colors"
                 aria-label="Toggle menu"
               >
                 <svg
@@ -115,12 +115,12 @@ export default function Navbar({ onCTAClick }: NavbarProps) {
             isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="px-4 py-3 space-y-1 bg-white/95 backdrop-blur-md border-t border-gray-100">
+          <div className="px-4 py-3 space-y-1 bg-black backdrop-blur-md border-t border-gray-800">
             {navLinks.map((link) => (
               <button
                 key={link.sectionId}
                 onClick={() => handleNavClick(link.sectionId)}
-                className="block w-full text-left px-4 py-3 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-[#F5C842]/10 rounded-lg transition-colors"
+                className="block w-full text-left px-4 py-3 text-base font-medium text-white hover:text-[#F5C842] hover:bg-white/10 rounded-lg transition-colors"
               >
                 {link.label}
               </button>
