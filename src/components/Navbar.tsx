@@ -47,7 +47,7 @@ export default function Navbar({ onCTAClick }: NavbarProps) {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Image
-                src="/assets/celebra-logo.svg"
+                src="/assets/celebra-logo.png"
                 alt="Celebra"
                 width={140}
                 height={40}
