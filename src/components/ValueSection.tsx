@@ -31,17 +31,17 @@ export default function ValueSection() {
 
   const values = [
     {
-      image: '/assets/events/event1.jpg',
+      image: '/assets/events/1.1.JPEG',
       title: 'Menos caos, más control',
       description: 'Diseñado para eventos que no se repiten. Cada celebración es única y merece ser recordada para siempre.',
     },
     {
-      image: '/assets/events/event2.jpg',
+      image: '/assets/events/1.2.JPEG',
       title: 'Sin apps, sin fricción',
       description: 'Tus invitados son los fotógrafos. Todos los recuerdos, en un solo lugar. Sin complicaciones.',
     },
     {
-      image: '/assets/events/event3.jpg',
+      image: '/assets/events/1.3.JPEG',
       title: 'Experiencia sin improvisaciones',
       description: 'Sistema probado. Proceso claro. Pensado para quienes organizan eventos en serio.',
     },
@@ -57,9 +57,9 @@ export default function ValueSection() {
           {values.map((value, index) => (
             <div
               key={index}
-              className="value-card opacity-0 translate-y-5 transition-all duration-700 ease-out bg-gray-50 rounded-2xl border border-gray-200 hover:-translate-y-1 hover:shadow-lg hover:border-[#F5C842] overflow-hidden group"
+              className="value-card opacity-0 translate-y-5 transition-all duration-700 ease-out bg-gray-50 rounded-2xl border border-gray-200 hover:-translate-y-1 hover:shadow-lg hover:border-[#F5C842] overflow-hidden group h-full flex flex-col"
             >
-              <div className="relative w-full aspect-[4/3] overflow-hidden">
+              <div className="relative w-full aspect-[4/3] overflow-hidden flex-shrink-0">
                 <Image
                   src={value.image}
                   alt={value.title}
@@ -69,7 +69,7 @@ export default function ValueSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
-              <div className="p-8">
+              <div className="p-8 flex-grow flex flex-col">
                 <h3 className="text-2xl font-semibold mb-4 text-gray-900">
                   {value.title}
                 </h3>
