@@ -30,7 +30,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
         <div className="text-center max-w-4xl mx-auto">
           {/* Brand line / Eyebrow */}
           <p className="text-sm md:text-lg font-medium tracking-[0.15em] uppercase text-gray-600 mb-5 md:mb-8">
-            Celebra <span className="text-gray-400 mx-2">—</span> Captura y celebra
+            Celebre y Capture
           </p>
 
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900 tracking-tight">
