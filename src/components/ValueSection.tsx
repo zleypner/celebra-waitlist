@@ -36,12 +36,12 @@ export default function ValueSection() {
       description: 'Diseñado para eventos que no se repiten. Cada celebración es única y merece ser recordada para siempre.',
     },
     {
-      image: '/assets/events/1.2.JPEG',
+      image: '/assets/events/1.3.JPEG',
       title: 'Sin apps, sin fricción',
       description: 'Tus invitados son los fotógrafos. Todos los recuerdos, en un solo lugar. Sin complicaciones.',
     },
     {
-      image: '/assets/events/1.3.JPEG',
+      image: '/assets/events/1.2.JPEG',
       title: 'Experiencia sin improvisaciones',
       description: 'Sistema probado. Proceso claro. Pensado para quienes organizan eventos en serio.',
     },

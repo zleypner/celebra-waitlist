@@ -35,13 +35,13 @@ export default function SocialProofSection({ onCTAClick }: SocialProofSectionPro
 
   const events = [
     {
-      image: '/assets/events/event1.jpg',
+      image: '/assets/events/2-5.4.JPEG',
       alt: 'Evento elegante',
       title: 'Bodas de ensueño',
       description: 'Organizadores que ya están en lista',
     },
     {
-      image: '/assets/events/event2.jpg',
+      image: '/assets/events/2-5.15.JPG',
       alt: 'Celebración especial',
       title: 'Quinceañeras únicas',
       description: 'Experiencias que no se repiten',

@@ -10,9 +10,10 @@ interface ScarcitySectionProps {
 export default function ScarcitySection({ onCTAClick }: ScarcitySectionProps) {
   const [spotsLeft, setSpotsLeft] = useState(23);
   const [timeLeft, setTimeLeft] = useState({
-    days: 7,
-    hours: 12,
-    minutes: 45,
+    days: 30,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   });
 
   useEffect(() => {
@@ -24,19 +25,21 @@ export default function ScarcitySection({ onCTAClick }: ScarcitySectionProps) {
       });
     }, 30000);
 
-    // Simular countdown (decrementar cada minuto)
+    // Simular countdown (decrementar cada segundo)
     const timeInterval = setInterval(() => {
       setTimeLeft((prev) => {
-        if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1 };
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else if (prev.minutes > 0) {
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
         } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59 };
+          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
         } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59 };
+          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
         }
         return prev;
       });
-    }, 60000);
+    }, 1000);
 
     return () => {
       clearInterval(spotsInterval);
@@ -57,7 +60,7 @@ export default function ScarcitySection({ onCTAClick }: ScarcitySectionProps) {
           <div className="order-2 md:order-1">
             <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/assets/events/event4.jpg"
+                src="/assets/events/2-5.66.JPEG"
                 alt="Evento exclusivo"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -101,7 +104,7 @@ export default function ScarcitySection({ onCTAClick }: ScarcitySectionProps) {
             </div>
 
             {/* Countdown Timer */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-4 gap-3 mb-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                 <div className="text-3xl font-bold text-[#F5C842]">{timeLeft.days}</div>
                 <div className="text-xs text-white/70 mt-1">Días</div>
@@ -113,6 +116,10 @@ export default function ScarcitySection({ onCTAClick }: ScarcitySectionProps) {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                 <div className="text-3xl font-bold text-[#F5C842]">{timeLeft.minutes}</div>
                 <div className="text-xs text-white/70 mt-1">Minutos</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="text-3xl font-bold text-[#F5C842]">{timeLeft.seconds}</div>
+                <div className="text-xs text-white/70 mt-1">Segundos</div>
               </div>
             </div>
 
